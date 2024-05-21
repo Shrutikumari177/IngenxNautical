@@ -1,4 +1,4 @@
-/* checksum : f64740d9094678a9dd33b07ce42f225a */
+/* checksum : c39f50ccbe5823bad15d4a8257f79b77 */
 @cds.external : true
 @m.IsDefaultEntityContainer : 'true'
 @sap.supported.formats : 'atom json xlsx'
@@ -19,6 +19,13 @@ entity NAUTIZVOYAPPROVAL_SRV.voyapprovalSet {
   @sap.sortable : 'false'
   @sap.filterable : 'false'
   key Vreqno : String(10) not null;
+  @sap.unicode : 'false'
+  @sap.label : 'E-Mail Address'
+  @sap.creatable : 'false'
+  @sap.updatable : 'false'
+  @sap.sortable : 'false'
+  @sap.filterable : 'false'
+  key Zemail : String(241) not null;
   @sap.unicode : 'false'
   @sap.label : 'Voyage No'
   @sap.creatable : 'false'

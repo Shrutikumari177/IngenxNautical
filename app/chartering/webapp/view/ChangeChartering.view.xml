@@ -37,21 +37,25 @@
                         id="Button1"
                         text="Save"
                         press="onSaveChartering"
+                         type="Emphasized"
                     />
                     <Button
                         id="Button3"
                         text="Refresh"
                         press="onRefresh"
+                        type="Emphasized"
                     />
                     <Button
                         id="Button4"
                         text="Cancel Chartering No."
                         press="onCancelChartering"
+                        type="Emphasized"
                     />
                     <Button
                         id="Button5"
                         text="Send For Approval"
                         press="onSendForApproval"
+                         type="Emphasized"
                         
                     />
                 </contentLeft>
@@ -269,7 +273,7 @@
                 >
                      <Panel
                         id="p1"
-                        height="300px"
+                        height="600px"
                      >
                             
                        

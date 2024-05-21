@@ -81,36 +81,36 @@ sap.ui.define(
  
    
  
-  onTokenUpdate: function(oEvent) {
-    var aRemovedTokens = oEvent.getParameter("removedTokens");
-    if (aRemovedTokens && aRemovedTokens.length > 0) {
-        aRemovedTokens.forEach(function(oToken) {
-            var sRemovedValue = oToken.getKey(); // Assuming you want to retrieve the key of the removed token
-            console.log("Removed token value:", sRemovedValue);
+//   onTokenUpdate: function(oEvent) {
+//     var aRemovedTokens = oEvent.getParameter("removedTokens");
+//     if (aRemovedTokens && aRemovedTokens.length > 0) {
+//         aRemovedTokens.forEach(function(oToken) {
+//             var sRemovedValue = oToken.getKey(); // Assuming you want to retrieve the key of the removed token
+//             console.log("Removed token value:", sRemovedValue);
            
-            // Iterate through the table data to find the matching value
-            var oTableData = this.getView().getModel("vendorModel").getData(); // Assuming your table data model is named "vendorModel"
-            var foundIndex = null;
-            for (var i = 0; i < oTableData.length; i++) {
-                if (oTableData[i].Lifnr === sRemovedValue) {
-                    foundIndex = i;
-                    break;
-                }
-            }
+//             // Iterate through the table data to find the matching value
+//             var oTableData = this.getView().getModel("vendorModel").getData(); // Assuming your table data model is named "vendorModel"
+//             var foundIndex = null;
+//             for (var i = 0; i < oTableData.length; i++) {
+//                 if (oTableData[i].Lifnr === sRemovedValue) {
+//                     foundIndex = i;
+//                     break;
+//                 }
+//             }
  
-            if (foundIndex !== null) {
-                console.log("Matching value found in table at index:", foundIndex);
-                // Remove the row from the table data
-                oTableData.splice(foundIndex, 1);
-                // Update the model bound to the table
-                this.getView().getModel("vendorModel").setData(oTableData);
-                console.log("Row removed from table.");
-            } else {
-                console.log("No matching value found in the table.");
-            }
-        }.bind(this));
-    }
-},
+//             if (foundIndex !== null) {
+//                 console.log("Matching value found in table at index:", foundIndex);
+//                 // Remove the row from the table data
+//                 oTableData.splice(foundIndex, 1);
+//                 // Update the model bound to the table
+//                 this.getView().getModel("vendorModel").setData(oTableData);
+//                 console.log("Row removed from table.");
+//             } else {
+//                 console.log("No matching value found in the table.");
+//             }
+//         }.bind(this));
+//     }
+// },
  
       vendorNo: function () {
         var oView = this.getView();
@@ -182,6 +182,7 @@ sap.ui.define(
         }
         var oTable = this.byId("myTable")
     oTable.setVisible(true);
+    console.log(aSelectedVendorIDs,"yhi ha")
     },
    
    

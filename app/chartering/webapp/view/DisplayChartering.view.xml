@@ -38,6 +38,7 @@
                         id="Button3"
                         text="Refresh"
                         press="onRefresh"
+                         type="Emphasized"
                     />
                     
                     

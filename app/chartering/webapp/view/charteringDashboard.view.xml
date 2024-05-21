@@ -28,7 +28,7 @@
                     </TileContent>
                 </GenericTile>
                 <GenericTile id="GenGenericTile5" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
-                    header="Show Bid Score" press="onCharteringApproval">
+                    header="Show Bid Score" press="onCharteringApproval" visible="false">
                     <TileContent id="_IDGenTileContent10" >
                     <ImageContent  src="sap-icon://form"></ImageContent>                
                     </TileContent>
