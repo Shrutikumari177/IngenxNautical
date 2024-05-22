@@ -113,7 +113,7 @@ sap.ui.define([
             context.setProperty("Chrqedate", BidEndDateFormat);
             context.setProperty("Chrqetime", obidEndT);
           });
-          sap.m.MessageToast.show("Data saved successfully");
+          sap.m.MessageToast.show("Email Sent Succesfully");
         }).catch(function (error) {
           console.error("Error updating values:", error);
         });

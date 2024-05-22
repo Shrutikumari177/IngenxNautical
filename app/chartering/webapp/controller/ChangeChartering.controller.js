@@ -357,10 +357,48 @@ sap.ui.define(
           sap.m.MessageToast.show("Error while saving data");
         }
       },
-     
     
     
       onSendForApproval: function(){
+        let ApprovalNo = [];
+        let that = this;
+        let oChrmin = this.byId("charteringNo").getValue();
+        if (!oChrmin) {
+            sap.m.MessageToast.show("Please enter Charting No");
+            return;
+        }
+        var oBindListSP = that.getView().getModel().bindList("/chartapprSet");
+        try {
+            var saveddata = oBindListSP.create({
+                "Creqno": "",
+                "Chrnmin": oChrmin
+            });
+            console.log("saving data:",saveddata);
+        
+            oBindListSP.requestContexts(0, Infinity).then(function (aContexts) {
+                aContexts.forEach(function (oContext) {
+                    if(oContext.getObject().Chrnmin === oChrmin){
+                        ApprovalNo.push(oContext.getObject());
+                    }
+                });
+                let appNo = ApprovalNo[0].Creqno;
+                console.log(appNo);
+                
+                sap.m.MessageBox.success(`chartering Approval no. ${appNo}  created successfully`);
+            }).catch(function(error){
+                console.error("Error while fetching data:", error);
+                sap.m.MessageToast.show("This item has already been sent for approval ");
+            });
+        
+        } catch (error) {
+            console.error("Error while saving data:", error);
+            sap.m.MessageToast.show("Error while saving data");
+        }
+    },
+    
+    
+    
+      onSendForApproval1: function(){
         let  ApprovalNo =[];
         let that = this;
         let oChrmin = this.byId("charteringNo").getValue();
@@ -376,6 +414,8 @@ sap.ui.define(
           });
           console.log("saving data:",saveddata);
          
+         
+         
           oBindListSP.requestContexts(0, Infinity).then(function (aContexts) {
             aContexts.forEach(function (oContext) {
               if(oContext.getObject().Chrnmin === oChrmin){
@@ -385,7 +425,8 @@ sap.ui.define(
             });
             let appNo = ApprovalNo[0].Creqno;
             console.log(appNo);
-            sap.m.MessageToast.show(`chartering Approval no. ${appNo}  created successfully`);
+            
+            sap.m.MessageBox.success(`chartering Approval no. ${appNo}  created successfully`);
           })
          
         

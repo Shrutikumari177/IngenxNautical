@@ -280,53 +280,53 @@
 
                         
                            
-                             <ScrollContainer id="scrollContainer" height="calc(100% - 50px)" horizontal="true" class="scrollContainer">
-                                <Table id="myTable" items="{vendorModel1>/}" visible="false"  	inset="false" sticky="ColumnHeaders">
+                             <ScrollContainer id="scrollContainer"  horizontal="true" vertical="false">
+                                <Table id="myTable" items="{vendorModel1>/}" visible="false"  	inset="false" sticky="ColumnHeaders" fixedLayout="false" >
                                         
                         
-                                    <columns >
-                                        <Column width="100px" minScreenWidth="Tablet" demandPopin="true">
+                                    <columns   >
+                                        <Column width="120px" >
                                             <Text text="Vendor No"  />
                                         </Column>
-                                        <Column width="80px"  minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Title" />
                                         </Column>
-                                        <Column width="80px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px"  >
                                             <Text text="Address" />
                                         </Column>
-                                        <Column width="100px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Name1" />
                                         </Column>
-                                        <Column width="80px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Name2" />
                                         </Column>
                                         
-                                        <Column width="100px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Street" />
                                         </Column>
-                                        <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Column  width="120px">
                                             <Text text="Postal" />
                                         </Column>
-                                        <Column width="100px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="City" />
                                         </Column>
-                                        <Column width="80px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Country" />
                                         </Column>
-                                        <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px">
                                             <Text text="Region" />
                                         </Column>
-                                        <Column width="100px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px">
                                             <Text text="Telephone1" />
                                         </Column>
                                         
-                                        <Column minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="fax No" />
                                         </Column>
-                                        <Column width="150px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Creation Date" />
                                         </Column>
-                                        <Column width="80px" minScreenWidth="Tablet" demandPopin="true">
+                                        <Column width="120px" >
                                             <Text text="Language" />
                                         </Column>
                         
